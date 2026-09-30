@@ -1,0 +1,7 @@
+{
+  "vendor": "Demo DVR Profile",
+  "model": "FV-DVR-16CH",
+  "channels": 16,
+  "timezone": "Asia/Kolkata",
+  "clock_offset_seconds": 140
+}
