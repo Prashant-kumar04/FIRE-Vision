@@ -1,0 +1,15 @@
+.env
+*.db
+*.sqlite
+uploads/
+evidence/
+artifacts/
+recovered/
+evidence_store/*
+reports/*
+.venv/
+venv/
+node_modules/
+frontend/dist/
+__pycache__/
+*.py[cod]

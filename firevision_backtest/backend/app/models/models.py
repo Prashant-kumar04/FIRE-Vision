@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+from typing import Optional
 from sqlalchemy import String, Integer, Float, Text, DateTime, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 from ..db import Base
@@ -32,7 +33,7 @@ class Evidence(Base):
     __tablename__='evidence'
     id: Mapped[int]=mapped_column(Integer,primary_key=True)
     case_id: Mapped[int]=mapped_column(ForeignKey('cases.id'))
-    device_id: Mapped[int|None]=mapped_column(ForeignKey('devices.id'),nullable=True)
+    device_id: Mapped[Optional[int]]=mapped_column(ForeignKey('devices.id'),nullable=True)
     filename: Mapped[str]=mapped_column(String(255))
     path: Mapped[str]=mapped_column(String(1000))
     size: Mapped[int]=mapped_column(Integer)
